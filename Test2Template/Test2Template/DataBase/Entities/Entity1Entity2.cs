@@ -10,5 +10,4 @@ public class Entity1Entity2
 
     public virtual Entity1 Entity1 { get; }
     public virtual Entity2 Entity2 { get; }
-    public virtual ICollection<Entity1Entity2> Entity1Entity2S { get; }
 }

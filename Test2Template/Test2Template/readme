@@ -1,4 +1,64 @@
-Migrations 
+--------------------------------------------------------------------------------------------
+STEP 0 : 
+- Add The Exeptions Handler Middle Ware 
+- Add the custom Exeptions 
+- Insert the correct Program.cs from template
+- Add Direcotories {API{controllers,Errors,MiddleWares,Models,Repositories,Services},
+                  DataBase{Configs,Context,Entities}}
 
+--------------------------------------------------------------------------------------------
+STEP 1 : [int Database{Entities}]
+Add Entities:
+{
+    1. Attributes including FK ids
+    2. Virtual Variables or ICollections (of other entities) that are the FK
+}
+
+--------------------------------------------------------------------------------------------
+STEP 2 : [int Database{Configs}]
+Create Configuration Files
+(public class Entity1Configuration : IEntityTypeConfiguration<Entity1>)
+
+--------------------------------------------------------------------------------------------
+STEP 3 : [int Database{Context}]
+Create Context File
+(public class MyContext : DbContext)
+{
+    with attributes : public DbSet<Entity1> Entity1S { get; set; }
+    with method : protected override void OnModelCreating(ModelBuilder modelBuilder)
+                      {
+                          base.OnModelCreating(modelBuilder);
+                          modelBuilder.ApplyConfiguration(new Entity1Configuration());
+                      }
+}
+
+------------------------------------------------------------------------------------------
+STEP 4 :
+Migrations commands:
 dotnet ef migrations add NAMEOFMIGRATION
 dotnet ef database update
+
+--------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------------------
+
+

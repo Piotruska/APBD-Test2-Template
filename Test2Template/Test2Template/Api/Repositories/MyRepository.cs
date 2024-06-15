@@ -24,7 +24,7 @@ public class MyRepository : ImyRepository
         //to find an entitys based on attribute
         // await _context.Entity1S.Where(x => x.Attribute1.Equals("something")).FirstOrDefaultAsync();
         
-        //Joining tables to return info
+        // Joining tables to return info
         // await _context.Entity1S
         //     .Where(x => x.IdEntity1 == 1)
         //     .Include(x => x.entity3)

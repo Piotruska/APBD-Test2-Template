@@ -20,6 +20,7 @@ builder.Services.AddExceptionHandler<ExceptionHandlingMiddleware>();
 
 // Adding repositories
 builder.Services.AddScoped<ImyRepository, MyRepository>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 // Adding services
 builder.Services.AddScoped<ImyService, MyService>();
@@ -37,6 +38,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.MapControllers();
 
 app.Run();
