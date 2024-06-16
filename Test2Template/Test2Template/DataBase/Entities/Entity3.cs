@@ -8,4 +8,5 @@ public class Entity3
     public string Attribute3 { get; set; }
     
     public virtual ICollection<Entity1> Entity1S { get; }
+    public virtual Entity1 Entity1 { get; }
 }

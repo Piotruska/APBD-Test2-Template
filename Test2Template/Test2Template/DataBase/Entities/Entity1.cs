@@ -10,6 +10,7 @@ public class Entity1
     public int IdEntity1Entity2 { get; set; }
     public int IdEntity3 { get; set; }
 
-    public virtual Entity3 entity3 { get; }
+    public virtual Entity3 entity3A { get; }
+    public virtual Entity3 entity3B { get; }
     public virtual ICollection<Entity1Entity2> Entity1Entity2S { get; }
 }

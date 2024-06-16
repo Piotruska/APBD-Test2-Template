@@ -5,6 +5,7 @@ using Test2Template.Api.Services;
 
 namespace Test2Template.Api.Controllers;
 
+
 public class MyController : ControllerBase
 {
     private ImyService _service;

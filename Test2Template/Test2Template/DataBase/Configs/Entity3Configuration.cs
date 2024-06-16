@@ -26,6 +26,11 @@ public class Entity3Configuration : IEntityTypeConfiguration<Entity3>
             .Property(x => x.Attribute3)
             .HasMaxLength(100)
             .IsRequired();
+
+        builder.HasMany(x => x.Entity1S)
+            .WithOne(x => x.entity3A)
+            .HasForeignKey(x=>x.IdEntity3);
+        
         builder
             .ToTable("Entity3", "Template");
     }
